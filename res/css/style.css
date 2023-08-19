@@ -1,108 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *,
 *:after,
 *::before {
-    padding: 0;
-    margin: 0;
-    outline: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body,
 input,
 textarea,
 button {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-:root {
-    --primary-color: wheat;
-    --secondary-color: #f1c40f;
+  text-decoration: none;
+  color: wheat;
 }
 
 header {
-    background-color: #24122A;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px
+  background-color: #24122A;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: wheat;
+  font-size: 1.2em;
 }
-
-header {
-    color: var(--primary-color);
-    font-size: 1.2em;
+header .profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 150px;
-    margin-bottom: 20px;
-    border: 5px solid var(--primary-color);
-    transition: border-color .2s ease;
+header .profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  margin-bottom: 20px;
+  border: 5px solid wheat;
+  transition: border-color 0.2s ease;
 }
-
-header img:hover {
-    border-color: var(--secondary-color);
+header .profile img:hover {
+  border-color: #f1c40f;
 }
-
-header small {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
-    margin-top: -16px;
-    margin-bottom: 16px;
+header .profile p {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-top: -10px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
 }
-
-header small i {
-    color: var(--secondary-color);
-    font-size: .8rem;
+header .profile p i {
+  color: #f1c40f;
+  font-size: 0.8rem;
 }
-
 header h2 {
-    font-size: 3em;
-    margin-bottom: 7px;
+  font-size: 3em;
+  margin-bottom: 7px;
 }
-
 header p {
-    font-size: 1em;
-    color: var(--secondary-color);
+  font-size: 1em;
+  color: #f1c40f;
 }
-
-header>.sociais {
-    margin-top: 40px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+header .sociais {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
-
-header>.sociais a {
-    color: var(--primary-color);
-    margin: 16px;
-    font-size: 40px;
-    text-decoration: none;
-    transition: ease .2s;
+header .sociais a {
+  color: wheat;
+  margin: 16px;
+  font-size: 40px;
+  text-decoration: none;
+  transition: ease 0.2s;
 }
-
-header>.sociais a:hover {
-    transform: translateY(-15px);
-    color: var(--secondary-color);
-}
+header .sociais a:hover {
+  transform: translateY(-15px);
+  color: var(--secondary-color);
+}/*# sourceMappingURL=style.css.map */
