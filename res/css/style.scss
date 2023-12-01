@@ -25,14 +25,22 @@ button {
 
 $primary-color: wheat;
 $secondary-color: #f1c40f;
+$dark-color: #24122A;
 
 a {
     text-decoration: none;
     color: $primary-color;
 }
-
-header {
-    $header-background-color: #24122A;
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    height: 2000px;
+}
+.rounded-full {
+    border-radius: 100%;
+}
+.header {
+    $header-background-color: $dark-color;
     background-color: $header-background-color;
     width: 100vw;
     height: 100vh;
@@ -49,18 +57,18 @@ header {
         display: flex;
         align-items: center;
         flex-direction: column;
-        img {
+        .profile-image {
             width: 150px;
             height: 150px;
             border-radius: 150px;
             margin-bottom: 20px;
             border: 5px solid $primary-color;
-            transition: border-color .2s ease;
+            transition: border .2s ease-in;
             &:hover {
                 border-color: $secondary-color;
             }
         }
-        p {
+        .profile-location {
             display: flex;
             justify-content: space-between;
             flex-direction: row;
@@ -68,18 +76,18 @@ header {
             gap: 6px;
             margin-top: -10px;
             margin-bottom: 16px;
-            font-size: .9rem;
-            i {
+            font-size: .9em;
+            .icon {
                 color: $secondary-color;
-                font-size: .8rem;
+                font-size: .8em;
             }
         }
     }
-    h2 {
+    .name {
         font-size: 3em;
         margin-bottom: 7px;
     }
-    p {
+    .description {
         font-size: 1em;
         color: $secondary-color;
     }
@@ -96,8 +104,83 @@ header {
             transition: ease .2s;
             &:hover {
                 transform: translateY(-15px);
-                color: var(--secondary-color);
+                color: $secondary-color
             }
         }
+    }
+}
+
+main.content {
+    .about {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin-top: 80px;
+        .image {
+            width: 322px;
+            height: 322px;
+            img {
+                width: 100%;
+                height: 100%;
+                border: 4px solid $secondary-color;
+            }
+        }
+        .description {
+            max-width: 600px;
+            h3 {
+                font-size: 1.4rem;
+                color: $dark-color;
+                margin-bottom: 20px;
+            }
+            p {
+                font-weight: 500;
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .content {
+        width: 748px;
+    }
+    main.content {
+        .about {
+            .image {
+                width: 200px;
+                min-width: 200px;
+                height: 200px;
+                min-height: 200px;
+            }
+            .description {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        width: 626px;
+    }
+    main.content {
+        .about {
+            flex-direction: column;
+            .description {
+                text-align: center;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 640px) {
+    .content {
+        width: 100vw;
+        max-width: 100%;
     }
 }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
     <meta name="author" content="Felipe Brugnaro">
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="./res/favicons/apple-touch-icon.png">
@@ -17,20 +18,17 @@
 </head>
 
 <body>
-
-    <header>
+    <section class="header">
         <section class="profile">
-            <img src="./res/image/felipe.jpg" alt="Felipe Brugnaro Profile Image">
-            <p>
-                <i class="fa fa-map-marker-alt"></i> Abrantes, Portugal
-            </p>
+            <img class="profile-image" src="./res/image/felipe.jpg" alt="Felipe Brugnaro Profile Image">
+            <div class="profile-location">
+                <i class="icon fa fa-map-marker-alt"></i>
+                <span>Abrantes, Portugal</span>
+            </div>
         </section>
-        <h2>Felipe Brugnaro</h2>
-        <p>Desenvolvedor Full Stack</p>
+        <h2 class="name">Felipe Brugnaro</h2>
+        <p class="description">Full Stack Developer</p>
         <section class="sociais">
-            <a target="_NEW" href="https://instagram.com/felipebrugnaro">
-                <i class="fab fa-instagram"></i>
-            </a>
             <a target="_NEW" href="https://api.whatsapp.com/send?phone=351934565726">
                 <i class="fab fa-whatsapp"></i>
             </a>
@@ -41,10 +39,19 @@
                 <i class="fab fa-github"></i>
             </a>
         </section>
-    </header>
+    </section>
+    <main class="content">
+        <div class="about">
+            <div class="image">
+                <img src="./res/image/felipe.jpg" class="rounded-full" alt="Felipe Brugnaro Image">
+            </div>
+            <div class="description">
+                <h3>Olá, meu nome é Felipe Brugnaro, </h3>
+                <p>Tenho 27 anos e sou desenvolvedor web, nascido em Campinas, SP, e atualmente residindo em Abrantes, Portugal. Com mais de 8 anos de experiência, destaco-me no universo da programação, sendo especializado em PHP. Aos 16 anos, fundei minha primeira agência digital com o apoio de um amigo, iniciando assim minha trajetória empreendedora. Desde então, tenho dedicado minha carreira ao desenvolvimento web, buscando constantemente inovação e aprendizado.</p>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
 </body>
-
-</html>
