@@ -5,8 +5,6 @@
   padding: 0;
   margin: 0;
   outline: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -27,72 +25,84 @@ a {
   color: wheat;
 }
 
-header {
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
   background-color: #24122A;
-  width: 100vw;
+}
+.header .content {
+  display: flex;
   height: 100vh;
-  max-width: 100%;
-  max-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.header .content .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .content .profile .image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 0.3rem solid transparent;
+  transition: border ease 0.3s;
+}
+.header .content .profile .image:hover {
+  border: 0.3rem solid #f1c40f;
+}
+.header .content .profile .name {
+  margin-top: 10px;
+  font-size: 3rem;
+  color: wheat;
+}
+.header .content .profile .job {
+  font-size: 1.3rem;
+  color: wheat;
+}
+@media (max-width: 430px) {
+  .header .content .profile .name {
+    font-size: 1.9rem;
+  }
+  .header .content .profile .job {
+    font-size: 1rem;
+  }
+}
+.header .content .sociais {
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  gap: 10px;
+}
+.header .content .sociais .social-item {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.page-content {
+  display: flex;
   flex-direction: column;
-  padding: 20px;
-  color: wheat;
-  font-size: 1.2em;
+  margin-top: 43px;
 }
-header .profile {
+.page-content .about {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
 }
-header .profile img {
-  width: 150px;
-  height: 150px;
-  border-radius: 150px;
-  margin-bottom: 20px;
-  border: 5px solid wheat;
-  transition: border-color 0.2s ease;
+.page-content .about .title {
+  font-size: 2rem;
+  color: #24122A;
 }
-header .profile img:hover {
-  border-color: #f1c40f;
-}
-header .profile p {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-  margin-top: -10px;
-  margin-bottom: 16px;
-  font-size: 0.9rem;
-}
-header .profile p i {
-  color: #f1c40f;
-  font-size: 0.8rem;
-}
-header h2 {
-  font-size: 3em;
-  margin-bottom: 7px;
-}
-header p {
-  font-size: 1em;
-  color: #f1c40f;
-}
-header .sociais {
-  margin-top: 40px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-header .sociais a {
-  color: wheat;
-  margin: 16px;
-  font-size: 40px;
-  text-decoration: none;
-  transition: ease 0.2s;
-}
-header .sociais a:hover {
-  transform: translateY(-15px);
-  color: var(--secondary-color);
+.page-content .about .description {
+  font-size: 1.2rem;
+  color: #24122A;
 }/*# sourceMappingURL=style.css.map */
